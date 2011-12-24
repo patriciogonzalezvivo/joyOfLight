@@ -32,6 +32,8 @@
 
 //--------------------------------------------------------------
 void testApp::setup(){
+    ofEnableAlphaBlending();
+    
 	camWidth = 640;
 	camHeight = 480;
 	
@@ -50,6 +52,8 @@ void testApp::setup(){
 	entrada.allocate(camWidth,camHeight);
 	filtro.allocate(camWidth,camHeight);
 	film.allocate(camWidth, camHeight);
+    
+    logo.loadImage("logo.png");
 }
 
 //--------------------------------------------------------------
@@ -191,11 +195,17 @@ void  testApp::superFastBlur(unsigned char *pix, int w, int h, int radius) {
 //--------------------------------------------------------------
 void testApp::draw(){
 	glDisable(GL_BLEND);
-	ofSetColor(255,255,255);
+	ofSetColor(255);
 	entrada.draw(0,0,ofGetWidth(),ofGetHeight());
 	glEnable(GL_BLEND);
 	glBlendFunc(GL_ONE, GL_ONE);
 	film.draw(0,0,ofGetWidth(),ofGetHeight());
+    
+    glDisable(GL_BLEND);
+    ofEnableAlphaBlending();
+    ofSetColor(250);
+	ofDrawBitmapString("Patricio Gonzalez Vivo.com",ofGetWidth()-260, ofGetHeight()-10 );
+	logo.draw(ofGetWidth()-50, ofGetHeight()-50, 47,50.6);
 }
 
 //--------------------------------------------------------------
@@ -249,7 +259,8 @@ void testApp::mouseDragged(int x, int y, int button){
 
 //--------------------------------------------------------------
 void testApp::mousePressed(int x, int y, int button){
-
+    if ( x > ofGetWidth()-300 && y > ofGetHeight()-30 )
+        ofLaunchBrowser("http://www.patriciogonzalezvivo.com");
 }
 
 //--------------------------------------------------------------

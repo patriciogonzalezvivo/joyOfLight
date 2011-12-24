@@ -48,6 +48,8 @@ public:
 	ofxCvGrayscaleImage 	filtro;
 	ofxCvColorImage			film;
 	
+    ofImage                 logo;
+    
 	int		camWidth, camHeight;
 	int		humbral;
 	
