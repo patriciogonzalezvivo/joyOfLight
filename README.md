@@ -1,4 +1,7 @@
-# [joyOfLight ![joyOfLight](http://patriciogonzalezvivo.com/2009/joyoflight/thumb.jpg)](http://patriciogonzalezvivo.com/2009/joyoflight/) #
+# [joyOfLight](http://patriciogonzalezvivo.com/2009/joyoflight/)
+[![joyOfLight](http://patriciogonzalezvivo.com/2009/joyoflight/thumb.jpg)](http://patriciogonzalezvivo.com/2009/joyoflight/) 
+##### by [Patricio Gonzalez Vivo](http://www.patriciogonzalezvivo.com)
+
 
 An openSource application that provides a means for people to play with light-painting in an intuitive and colorful way.
 
